@@ -6,13 +6,12 @@
 ![Python](https://img.shields.io/badge/Python-Pandas-3776AB?logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![BI](https://img.shields.io/badge/Visualization-Power%20BI-F2C811?logo=powerbi&logoColor=111111)
-![Status](https://img.shields.io/badge/Project-Completed-2ea44f)
 
 ## Overview
 
-This project analyzes **3,900 purchase records across 18 columns** to explore customer shopping behavior and translate the findings into business questions for retail stakeholders. The workflow combines data preparation in Python, analytical querying in PostgreSQL, and visual reporting in Power BI.
+This project analyzes **3,900 purchase records across 18 columns** to explore customer shopping behavior and translate the findings into business questions for retail stakeholders. The documented workflow combines data preparation in Python, analytical querying in PostgreSQL, and visual reporting in Power BI.
 
-The project report records **37 missing values in `review_rating`**, handled by imputing the median rating within each product category.
+The supplied report records **37 missing values in `review_rating`**, handled by imputing the median rating within each product category.
 
 ## Business questions explored
 
@@ -30,22 +29,7 @@ The project report records **37 missing values in `review_rating`**, handled by 
 ## Workflow
 
 ```text
-Raw shopping data
-      ↓
-Python / pandas
-Inspect · clean · impute missing ratings · standardize column names
-      ↓
-Feature engineering
-Age groups · purchase-frequency feature · redundancy check
-      ↓
-PostgreSQL
-Load cleaned data · answer business questions with SQL
-      ↓
-Power BI
-Interactive visual exploration and stakeholder reporting
-      ↓
-Recommendations
-Subscriptions · loyalty · discount policy · product campaigns · targeting
+Shopping data → Python/pandas preparation → PostgreSQL analysis → Power BI reporting → business recommendations
 ```
 
 ## Tools and skills demonstrated
@@ -53,10 +37,10 @@ Subscriptions · loyalty · discount policy · product campaigns · targeting
 | Area | Techniques |
 |---|---|
 | Python | pandas, dataset inspection, missing-value handling, column standardization, feature engineering |
-| SQL | PostgreSQL, aggregations, conditional analysis, ranking/segmentation questions, purchase-behavior analysis |
+| SQL | PostgreSQL, aggregations, conditional analysis, customer segmentation, purchase-behavior analysis |
 | Data preparation | Median imputation by product category, age-group creation, redundancy check |
-| Power BI | Interactive dashboarding and visual communication |
-| Business analysis | Translating analysis into retention, promotion, and targeting recommendations |
+| Power BI | Dashboarding and visual communication |
+| Business analysis | Retention, promotion, product positioning, and targeting recommendations |
 
 ## Dataset profile
 
@@ -67,45 +51,35 @@ Subscriptions · loyalty · discount policy · product campaigns · targeting
 | Customer profile | Age, gender, location, subscription status |
 | Purchase details | Item, category, purchase amount, season, size, color |
 | Shopping behavior | Discount/promo usage, previous purchases, purchase frequency, rating, shipping type |
-| Missing data noted in report | 37 values in review rating |
-
-The source report describes the dataset and its preparation. No raw dataset is included in this repository section unless separately added; do not assume customer-level data is present in the public repo.
+| Missing data reported | 37 values in review rating |
 
 ## Business recommendations
 
-- **Grow subscriptions:** communicate clear subscriber benefits and test targeted offers.
+- **Grow subscriptions:** communicate subscriber benefits and test targeted offers.
 - **Build loyalty:** reward repeat purchases and encourage movement into higher-loyalty segments.
-- **Review discount effectiveness:** balance conversion and purchase volume against margin impact.
-- **Promote strong products:** use product ratings and purchase popularity to inform campaigns.
+- **Review discount effectiveness:** balance purchase volume against margin impact.
+- **Promote strong products:** use ratings and purchase popularity to inform campaigns.
 - **Target thoughtfully:** use age-group revenue contribution and shipping preferences to guide campaign hypotheses.
 
-These are recommendations documented from the project report; they should be validated against margin, campaign, and customer-level evidence before operational rollout.
+These recommendations are documented in the supplied report. Validate them against margin, campaign, and customer-level evidence before operational rollout.
 
-## Repository contents
+## Project documentation
 
-- **Project report:** methodology, business questions, dashboard overview, and recommendations.
-- **Power BI report:** interactive dashboard file.
-- **SQL/Python assets:** analytical scripts and data-preparation code, where included.
+- [Project methodology and workflow](docs/PROJECT_METHODOLOGY.md)
+- [PDF report and Power BI dashboard artifacts](https://github.com/nihaalmohd/Customer-Trends-Data-Analysis-Python-SQL-Power-BI) — the two original binary files were supplied separately and still need to be committed to the repository under `assets/`; use the upload instructions in the provided asset package.
 
-## How to review the project
+## Reproducibility and next improvements
 
-1. Start with the project report to understand the workflow and business questions.
-2. Open the Power BI report in Power BI Desktop to explore the visuals and filters.
-3. Review the SQL and Python assets to understand how the analysis was prepared and queried.
+The supplied PDF summarizes the workflow and SQL business questions, but it does not include the original executable Python scripts, SQL statements, exact table schema, DAX measures, or Power Query steps. To make the project fully reproducible:
 
-## Limitations and next improvements
-
-- Add the executable Python notebook/script and PostgreSQL query file so the workflow is reproducible end-to-end.
-- Document the exact DAX measures and Power Query transformations used in the dashboard.
-- Add dashboard screenshots for quick viewing on GitHub without Power BI Desktop.
-- Include a data dictionary and reproducible validation checks.
-- Quantify business impact only after validating findings against the underlying data.
+1. Add the original Python notebook/script and PostgreSQL query file.
+2. Add the PDF report and `.pbix` dashboard to `assets/`.
+3. Add dashboard screenshots and a data dictionary.
+4. Document dataset provenance and license before redistributing raw data.
+5. Validate all numerical insights against the underlying data before publishing quantified claims.
 
 ## Author
 
-**Mohammad Nihaal**  
-Data Analytics Portfolio · Python · SQL · Power BI
+**Mohammad Nihaal** · Data Analytics Portfolio · Python · SQL · Power BI
 
----
-
-*Built as a portfolio case study to demonstrate analytical workflow, business-question framing, and dashboard communication. See the report and dashboard files in this repository for the project artifacts.*
+*Portfolio case study focused on analytical workflow, business-question framing, and dashboard communication.*
