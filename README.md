@@ -68,6 +68,10 @@ These recommendations are documented in the supplied report. Validate them again
 - [Project methodology and workflow](docs/PROJECT_METHODOLOGY.md)
 - [PDF report and Power BI dashboard artifacts](https://github.com/nihaalmohd/Customer-Trends-Data-Analysis-Python-SQL-Power-BI) — the two original binary files were supplied separately and still need to be committed to the repository under `assets/`; use the upload instructions in the provided asset package.
 
+## Dashboard quality review
+
+A structural review found several chart-title issues and checked summary metrics against the supplied CSV. See [`docs/DASHBOARD_REVIEW.md`](docs/DASHBOARD_REVIEW.md) for the corrected labels, verified dataset figures, and final Power BI Desktop validation checklist. The reviewed PBIX copy is prepared locally, but still needs to be uploaded to `assets/` after it is opened and validated in Power BI Desktop.
+
 ## Reproducibility and next improvements
 
 The supplied PDF summarizes the workflow and SQL business questions, but it does not include the original executable Python scripts, SQL statements, exact table schema, DAX measures, or Power Query steps. To make the project fully reproducible:
